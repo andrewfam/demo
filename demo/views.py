@@ -17,3 +17,10 @@ def load_exceptions(request):
 	template = 'load_exceptions.html'
 	template_vars = {}
 	return render(request, template, template_vars)
+
+def load_pdb(request):
+	import pdb; pdb.set_trace()
+	number = 10 / 0
+	
+	template_vars = {}
+	return render(request, template, template_vars)
